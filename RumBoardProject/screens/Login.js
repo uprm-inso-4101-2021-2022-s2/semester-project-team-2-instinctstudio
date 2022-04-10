@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
-import {View} from 'react-native';
+import {View, Alert} from 'react-native';
 
 // formik 
 import{Formik} from 'formik';
@@ -21,12 +21,22 @@ import {
     StyledTextInput,
     RightIcon,
     StyledButton,
+    StyledTextUnderlined,
     ButtontText,
-    Colors
+    Colors,
+    GuestButton
 } 
 from './../components/styles';
 
 const {primary, darkLight, secondary,tertiary , green } = Colors;
+
+
+//APi Client
+import axios from 'axios';
+
+
+
+
 
 const Login = () => {
     const [hidePassword, setHidePassword] = useState(true);
@@ -35,7 +45,8 @@ const Login = () => {
             <StatusBar style = "dark"/>
             <InnerContainer>
                 {/* Code for the welcome screen implement logo  */}
-                <PageLogo resizeMode = "cover" source = {require('./../assets/logo(1).png')} />
+                <PageLogo resizeMode = "cover" source = {require('./../assets/logo(2).png')} />
+
                 <PageTitle>RUM BOARD</PageTitle>
                 <SubTitle>Account Login</SubTitle>
 
@@ -43,7 +54,7 @@ const Login = () => {
                 <Formik
                     initialValues = {{email: '', password: ''}}
                     onSubmit = {(values) => {
-                        console.log(values);
+                        console.log(values + "hhe");
                     }}
 
                 >
@@ -53,7 +64,7 @@ const Login = () => {
                         <MyTextInput
                          label = "Email Address"
                          icon = "mail"
-                         placeholder = "jonathan.figueroa16@upr.edu"
+                         placeholder = "example@upr.edu"
                          placeholderTextColor = {tertiary}
                          onChangeText = {handleChange('email')}
                          onBlur = {handleBlur('email')}
@@ -74,13 +85,30 @@ const Login = () => {
                          hidePassword = {hidePassword}
                          setHidePassword = {setHidePassword}
                     />
-                    <StyledButton >
+                    <StyledButton
+                     onPress={() => Alert.alert('Log in')}>
                         <ButtontText>
                             Login
                         </ButtontText>
                     </StyledButton>
-                         
+
+                    <StyledTextUnderlined
+                       onPress={() => Alert.alert('Sign up')}>
+                        <ButtontText>
+                           Sign up
+                        </ButtontText>
+                    </StyledTextUnderlined>
+
+                    <GuestButton
+                    activeOpacity={0.8}
+                    onPress={() => Alert.alert('Login as Guest')}>
+                        <ButtontText>
+                        Login as Guest
+                        </ButtontText>
+                    </GuestButton>
+
                     </StyledFormArea>)}
+
                 </Formik>
             </InnerContainer>
         </StyledContainer>
@@ -102,5 +130,18 @@ const MyTextInput = ({label, icon, isPassword, hidePassword, setHidePassword, ..
     </View>)
 
 };
+const SignupButton = () =>
+{
+    return(
+    <View>
+
+    </View>
+    );
+
+};
+
+
+
+
 
 export default Login;

@@ -33,8 +33,9 @@ export const InnerContainer = styled.View`
 `;
 
 export const PageLogo = styled.Image`
-    width; 250px;
-    height: 300px;
+
+    width:90%;
+    height: 30%;
 
 `;
 export const PageTitle = styled.Text`
@@ -101,6 +102,24 @@ export const StyledButton = styled.TouchableOpacity`
     height: 60px;
 `;
 
+export const StyledTextUnderlined = styled.TouchableOpacity`
+    padding: 15px;
+    background-color: ${red};
+    justify-content: center;
+    border-radius: 5px;
+    margin-vertical: 5px;
+    height: 60px;
+
+`
+export const GuestButton = styled.TouchableOpacity`
+    padding: 15px;
+    background-color: ${brand};
+    justify-content: center;
+    border-radius: 5px;
+    margin-vertical: 5px;
+    height: 60px;
+
+`
 export const ButtontText = styled.Text`
     color: ${tertiary};
     font-size: 16px;
