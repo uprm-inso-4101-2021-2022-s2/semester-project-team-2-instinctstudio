@@ -57,6 +57,21 @@ const Signup = () => {
 
                         >
                             {({handleChange, handleBlur, handleSubmit, values }) => (
+
+                         <StyledFormArea>
+                              {/* Code for the login feature */}
+                              <MyTextInput
+                               label = "Name"
+                               icon = "name"
+                               placeholder = "My name is Jeff"
+                               placeholderTextColor = {blue}
+                               onChangeText = {handleChange('email')}
+                               onBlur = {handleBlur('email')}
+                               value = {values.email}
+                               KeyboardType = "email-address"
+                          />
+
+
                             <StyledFormArea>
                                 {/* Code for the login feature */}
                                 <MyTextInput

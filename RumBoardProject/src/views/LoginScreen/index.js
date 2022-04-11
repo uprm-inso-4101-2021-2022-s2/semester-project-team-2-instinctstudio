@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import {View, Alert} from 'react-native';
 
-// formik 
+// formik
 import{Formik} from 'formik';
 
 
@@ -25,7 +25,7 @@ import {
     ButtonText,
     Colors,
     GuestButton
-} 
+}
 from './../components/styles';
 
 const {primary, darkLight, secondary,tertiary , green } = Colors;
@@ -59,7 +59,7 @@ const Login = () => {
 
                 >
                     {({handleChange, handleBlur, handleSubmit, values }) => (
-                    <StyledFormArea> 
+                    <StyledFormArea>
                         {/* Code for the login feature */}
                         <MyTextInput
                          label = "Email Address"
@@ -69,7 +69,7 @@ const Login = () => {
                          onChangeText = {handleChange('email')}
                          onBlur = {handleBlur('email')}
                          value = {values.email}
-                         KeyboardType = "email-address" 
+                         KeyboardType = "email-address"
                     />
 
                       <MyTextInput
@@ -124,7 +124,7 @@ const MyTextInput = ({label, icon, isPassword, hidePassword, setHidePassword, ..
             <StyledInputLabel>{label}</StyledInputLabel>
             <StyledTextInput {...props} />
             {isPassword && (
-            // Code for the password, see and not see the password 
+            // Code for the password, see and not see the password
             <RightIcon onPress ={() => setHidePassword(!hidePassword)}>
                 <Ionicons name = {hidePassword ? 'md-eye-off' : 'md-eye'}    size = {30} color = {green} />
             </RightIcon>)}
