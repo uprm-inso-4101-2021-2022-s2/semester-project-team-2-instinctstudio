@@ -26,17 +26,9 @@ import {
     Colors,
     GuestButton
 } 
-from './../components/styles';
+from './../src/components/styles';
 
 const {primary, darkLight, secondary,tertiary , green } = Colors;
-
-
-//APi Client
-import axios from 'axios';
-
-
-
-
 
 const Login = () => {
     const [hidePassword, setHidePassword] = useState(true);
@@ -44,8 +36,8 @@ const Login = () => {
         <StyledContainer>
             <StatusBar style = "dark"/>
             <InnerContainer>
-                {/* Code for the welcome screen implement logo  */}
-                <PageLogo resizeMode = "cover" source = {require('./../assets/logo(2).png')} />
+
+                <PageLogo resizeMode = "cover" source = {require('./src/assets/logo(2).png')} />
 
                 <PageTitle>RUM BOARD</PageTitle>
                 <SubTitle>Account Login</SubTitle>
@@ -60,7 +52,7 @@ const Login = () => {
                 >
                     {({handleChange, handleBlur, handleSubmit, values }) => (
                     <StyledFormArea> 
-                        {/* Code for the login feature */}
+
                         <MyTextInput
                          label = "Email Address"
                          icon = "mail"
@@ -124,20 +116,11 @@ const MyTextInput = ({label, icon, isPassword, hidePassword, setHidePassword, ..
             <StyledInputLabel>{label}</StyledInputLabel>
             <StyledTextInput {...props} />
             {isPassword && (
-            // Code for the password, see and not see the password 
+
             <RightIcon onPress ={() => setHidePassword(!hidePassword)}>
                 <Ionicons name = {hidePassword ? 'md-eye-off' : 'md-eye'}    size = {30} color = {green} />
             </RightIcon>)}
     </View>)
-
-};
-const SignupButton = () =>
-{
-    return(
-    <View>
-
-    </View>
-    );
 
 };
 

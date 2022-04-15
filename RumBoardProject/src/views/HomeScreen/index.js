@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import {View} from 'react-native';
-
+import {SafeAreaView, Text, TouchableHighlight} from 'react-native';
 // formik
 import{Formik} from 'formik';
 
@@ -23,5 +23,13 @@ import {
     StyledButton,
     ButtontText,
     Colors
-}
-    from './../components/styles';
+} from './../../components/styles.js';
+
+const HomeScreen = ({navigation}) => (
+  <SafeAreaView>
+    <Text>Screen: Home</Text>
+  </SafeAreaView>
+);
+
+export default HomeScreen;
+

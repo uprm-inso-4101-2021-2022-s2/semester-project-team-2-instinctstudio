@@ -1,6 +1,6 @@
 import axios from 'axios';
 import AsyncStorage from '@react-native-community/async-storage';
-import {LIVEURL, APITOKEN} from "@env"
+//import {LIVEURL, APITOKEN} from "@env"
 
 /* switch this for testing on staging or production */
 export const staging = false;

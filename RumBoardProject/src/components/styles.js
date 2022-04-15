@@ -1,12 +1,25 @@
 import styled from 'styled-components';
 import {View, Text, Image, TextInput, TouchableOpacity} from 'react-native';
 import Constants from 'expo-constants';
+//import Colors from './../styles/colors.js';
+
 
 const StatusBarHeight = Constants.statusBarHeight;
 
-//colors 
+export const Colors = {
+    primary: '#ffffff',
+    secondary: '#E5E7EB',
+    tertiary: '#1F2937',
+    darkLight: '#9CA3AF',
+    brand: '#6D28D9',
+    green: '#10B981',
+    red: '#EF4444',
+    blue: '#5C7CFA',
+};
 
-const { primary, secondary, tertiary, darkLight, brand, green, red } = Colors;
+const { primary, secondary, tertiary, darkLight, brand, green, red, blue } = Colors;
+
+//const primary = Colors.primary, secondary = Colors.secondary, tertiary = Colors.tertiary, darkLight = Colors.darkLight, brand = Colors.brand, green = Colors.green, red = Colors.red;
 
 export const StyledContainer = styled.View`
     flex: 1;
@@ -99,7 +112,7 @@ export const StyledTextUnderlined = styled.TouchableOpacity`
     margin-vertical: 5px;
     height: 60px;
 
-`
+`;
 export const GuestButton = styled.TouchableOpacity`
     padding: 15px;
     background-color: ${brand};
@@ -108,8 +121,17 @@ export const GuestButton = styled.TouchableOpacity`
     margin-vertical: 5px;
     height: 60px;
 
-`
+`;
 export const ButtonText = styled.Text`
     color: ${tertiary};
     font-size: 16px;
+`;
+export const BlueButton = styled.TouchableOpacity`
+    padding: 15px;
+    background-color: ${blue};
+    justify-content: center;
+    border-radius: 5px;
+    margin-vertical: 5px;
+    height: 60px;
+
 `;

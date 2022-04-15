@@ -1,11 +1,8 @@
 import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
-import {View, Alert} from 'react-native';
-
+import {View, Alert, TouchableHighlight} from 'react-native';
 // formik
 import{Formik} from 'formik';
-
-
 //icons
 import {Octicons, Ionicons} from '@expo/vector-icons';
 
@@ -25,27 +22,18 @@ import {
     ButtonText,
     Colors,
     GuestButton
-}
-from './../components/styles';
+} from './../../components/styles.js';
 
 const {primary, darkLight, secondary,tertiary , green } = Colors;
 
-
-//APi Client
-import axios from 'axios';
-
-
-
-
-
-const Login = () => {
+const Login = ({navigation}) => {
     const [hidePassword, setHidePassword] = useState(true);
     return (
         <StyledContainer>
             <StatusBar style = "dark"/>
             <InnerContainer>
-                {/* Code for the welcome screen implement logo  */}
-                <PageLogo resizeMode = "cover" source = {require('./../assets/logo(2).png')} />
+
+                <PageLogo resizeMode = "cover" source = {require('./../../assets/logo(2).png')} />
 
                 <PageTitle>RUM BOARD</PageTitle>
                 <SubTitle>Account Login</SubTitle>
@@ -60,7 +48,7 @@ const Login = () => {
                 >
                     {({handleChange, handleBlur, handleSubmit, values }) => (
                     <StyledFormArea>
-                        {/* Code for the login feature */}
+
                         <MyTextInput
                          label = "Email Address"
                          icon = "mail"
@@ -86,14 +74,14 @@ const Login = () => {
                          setHidePassword = {setHidePassword}
                     />
                     <StyledButton
-                     onPress={() => Alert.alert('Log in')}>
+                     onPress={() => Alert.alert('Login')}>
                         <ButtonText>
                             Login
                         </ButtonText>
                     </StyledButton>
 
                     <StyledTextUnderlined
-                       onPress={() => Alert.alert('Sign up')}>
+                       onPress={() =>  navigation.navigate('SignUp')}>
                         <ButtonText>
                            Sign up
                         </ButtonText>
@@ -129,15 +117,6 @@ const MyTextInput = ({label, icon, isPassword, hidePassword, setHidePassword, ..
                 <Ionicons name = {hidePassword ? 'md-eye-off' : 'md-eye'}    size = {30} color = {green} />
             </RightIcon>)}
     </View>)
-
-};
-const SignupButton = () =>
-{
-    return(
-    <View>
-
-    </View>
-    );
 
 };
 

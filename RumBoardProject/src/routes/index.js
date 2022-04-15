@@ -1,41 +1,16 @@
-import { createAppContainer, createSwitchNavigator } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
-import { connect } from 'react-redux';
-import LoginScreen from '../views/Login';
-import AuthLoading from '../views/AuthScreen';
-import HomeScreen from '../views/HomeScreen';
+import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 
-const AuthStack = createStackNavigator(
-    {
-        Login: Login,
-    },
-    {
-        initialRouteName: 'Login',
-        defaultNavigationOptions: {
-            headerShown: false,
-        },
-    },
+import AuthNavigator from './auth-navigator';
+import AppNavigator from './app-navigator';
+
+const RootNavigator = createSwitchNavigator(
+  {
+    Auth: AuthNavigator,
+    App: AppNavigator,
+  },
+  {
+    initialRouteName: 'Auth',
+  },
 );
 
-const AppStack = createStackNavigator({
-    Home: HomeScreen
-}, {
-    initialRouteName: 'Home',
-    defaultNavigationOptions: {
-        headerShown: false,
-    },
-})
-const RouteContainer = createAppContainer(
-    createSwitchNavigator(
-        {
-            Authentication: AuthLoading,
-            Auth: AuthStack,
-            App: AppStack,
-        },
-        {
-            initialRouteName: 'Authentication',
-        },
-    ),
-);
-
-export default connect(null, null)(RouteContainer);
+export default createAppContainer(RootNavigator);
