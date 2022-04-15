@@ -85,11 +85,11 @@ const Login = ({navigation}) => {
                         <ButtonText>
                            Sign up
                         </ButtonText>
-                    </StyledTextUnderlined>
+                                    </StyledTextUnderlined>
 
                     <GuestButton
                     activeOpacity={0.8}
-                    onPress={() => Alert.alert('Login as Guest')}>
+                    onPress={() =>navigation.navigate('Home')}>
                         <ButtonText>
                         Login as Guest
                         </ButtonText>

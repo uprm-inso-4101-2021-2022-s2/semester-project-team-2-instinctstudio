@@ -1,21 +1,12 @@
 import styled from 'styled-components';
 import {View, Text, Image, TextInput, TouchableOpacity} from 'react-native';
 import Constants from 'expo-constants';
-//import Colors from './../styles/colors.js';
+import * from './../styles/colors.js';
 
 
 const StatusBarHeight = Constants.statusBarHeight;
 
-export const Colors = {
-    primary: '#ffffff',
-    secondary: '#E5E7EB',
-    tertiary: '#1F2937',
-    darkLight: '#9CA3AF',
-    brand: '#6D28D9',
-    green: '#10B981',
-    red: '#EF4444',
-    blue: '#5C7CFA',
-};
+
 
 const { primary, secondary, tertiary, darkLight, brand, green, red, blue } = Colors;
 
@@ -49,6 +40,13 @@ export const PageTitle = styled.Text`
     padding: 10px;
 `;
 
+export const AboutText_Green_Big = styled.Text`
+    font-size: 30px;
+    text-align: justify;
+    font-weight: bold;
+    color: ${green};
+    padding: 10px;
+`;
 export const SubTitle = styled.Text`
     font-size = 18px;
     margin-bottom: 20px;

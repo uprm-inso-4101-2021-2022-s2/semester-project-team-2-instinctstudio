@@ -3,8 +3,9 @@ import { StatusBar } from 'expo-status-bar';
 import {View} from 'react-native';
 import {SafeAreaView, Text, TouchableHighlight} from 'react-native';
 // formik
-import{Formik} from 'formik';
 
+
+const { primary, secondary, tertiary, darkLight, brand, green, red, blue } = Colors;
 
 //icons
 import {Octicons, Ionicons} from '@expo/vector-icons';
@@ -22,13 +23,18 @@ import {
     RightIcon,
     StyledButton,
     ButtontText,
-    Colors
+    Colors,
+    HomeText,
 } from './../../components/styles.js';
 
 const HomeScreen = ({navigation}) => (
-  <SafeAreaView>
-    <Text>Screen: Home</Text>
-  </SafeAreaView>
+    <StyledContainer>
+      <SafeAreaView>
+      <HomeText>
+
+      </HomeText>
+      </SafeAreaView>
+    </StyledContainer>
 );
 
 export default HomeScreen;
