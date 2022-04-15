@@ -5,7 +5,7 @@ import {View, Alert, TouchableHighlight} from 'react-native';
 import{Formik} from 'formik';
 //icons
 import {Octicons, Ionicons} from '@expo/vector-icons';
-
+import {Colors} from './../../styles/colors.js';
 import {
     StyledContainer,
     InnerContainer,
@@ -20,7 +20,6 @@ import {
     StyledButton,
     StyledTextUnderlined,
     ButtonText,
-    Colors,
     GuestButton
 } from './../../components/styles.js';
 

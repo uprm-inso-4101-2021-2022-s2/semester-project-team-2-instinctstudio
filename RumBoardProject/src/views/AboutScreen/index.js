@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, Text} from 'react-native';
-
+import {Colors} from './../../styles/colors.js';
 const { primary, secondary, tertiary, darkLight, brand, green, red, blue } = Colors;
 
 //icons

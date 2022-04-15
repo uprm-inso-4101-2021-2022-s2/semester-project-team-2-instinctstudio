@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import {SafeAreaView, Text, TouchableHighlight, View} from 'react-native';
+import {SafeAreaView, Text, TouchableHighlight, View, Alert} from 'react-native';
 import{Formik} from 'formik';
 import { StatusBar } from 'expo-status-bar';
 //icons
 import {Octicons, Ionicons} from '@expo/vector-icons';
-
+import {Colors} from './../../styles/colors.js';
 import {
     StyledContainer,
     InnerContainer,
@@ -19,7 +19,6 @@ import {
     StyledButton,
     StyledTextUnderlined,
     ButtonText,
-    Colors,
     GuestButton,
     BlueButton,
 

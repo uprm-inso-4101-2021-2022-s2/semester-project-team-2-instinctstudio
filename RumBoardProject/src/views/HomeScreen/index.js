@@ -4,7 +4,7 @@ import {View} from 'react-native';
 import {SafeAreaView, Text, TouchableHighlight} from 'react-native';
 // formik
 
-
+import {Colors} from './../../styles/colors.js';
 const { primary, secondary, tertiary, darkLight, brand, green, red, blue } = Colors;
 
 //icons
@@ -22,11 +22,12 @@ import {
     StyledTextInput,
     RightIcon,
     StyledButton,
-    ButtontText,
-    Colors,
-    HomeText,
-} from './../../components/styles.js';
+    ButtonText,
 
+} from './../../components/styles.js';
+import{
+    HomeText,
+} from './../../components/home_style.js';
 const HomeScreen = ({navigation}) => (
     <StyledContainer>
       <SafeAreaView>

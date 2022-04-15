@@ -13,3 +13,4 @@ export const Colors = {
     red: '#EF4444',
     blue: '#5C7CFA',
 };
+
