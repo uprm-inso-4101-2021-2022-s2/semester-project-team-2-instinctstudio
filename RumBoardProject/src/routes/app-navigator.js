@@ -1,4 +1,4 @@
-import {createBottomTabNavigator} from 'react-navigation-tabs';
+import {createStackNavigator} from 'react-navigation-stack';
 
 import HomeScreen from '../views/HomeScreen';
 import AboutScreen from '../views/AboutScreen';
@@ -10,17 +10,15 @@ const TabNavigatorConfig = {
 };
 
 const RouteConfigs = {
-    Home:{
-        screen: HomeScreen,
-    },
-    About:{
-        screen: AboutScreen,
-    },
+    Home: HomeScreen,
+
+    About:AboutScreen,
+
 
 };
 
 
-const AppNavigator = createBottomTabNavigator(RouteConfigs, TabNavigatorConfig);
+const AppNavigator = createStackNavigator(RouteConfigs, TabNavigatorConfig);
 
 
 export default AppNavigator;

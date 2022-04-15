@@ -6,7 +6,7 @@ import {SafeAreaView, Text, TouchableHighlight} from 'react-native';
 
 import {Colors} from './../../styles/colors.js';
 const { primary, secondary, tertiary, darkLight, brand, green, red, blue } = Colors;
-
+import {SideBar} from "./../MenuScreen";
 //icons
 import {Octicons, Ionicons} from '@expo/vector-icons';
 
@@ -27,15 +27,16 @@ import {
 } from './../../components/styles.js';
 import{
     HomeText,
-} from './../../components/home_style.js';
-const HomeScreen = ({navigation}) => (
-    <StyledContainer>
-      <SafeAreaView>
-      <HomeText>
+    StyledContainerHome,
 
-      </HomeText>
+} from './../../components/home_style.js';
+
+const HomeScreen = ({navigation}) => (
+    <StyledContainerHome>
+      <SafeAreaView>
+        <SideBar/>
       </SafeAreaView>
-    </StyledContainer>
+    </StyledContainerHome>
 );
 
 export default HomeScreen;
