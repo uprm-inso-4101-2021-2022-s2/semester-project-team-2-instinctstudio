@@ -20,7 +20,14 @@ import {
     StyledButton,
     StyledTextUnderlined,
     ButtonText,
-    GuestButton
+    GuestButton,
+    SignUpText,
+    SignUpView,
+    TextLink,
+    TextLinkContent,
+    GuestText,
+    GuestView,
+    AnotherLogo
 } from './../../components/styles.js';
 
 const {primary, darkLight, secondary,tertiary , green } = Colors;
@@ -33,6 +40,7 @@ const Login = ({navigation}) => {
             <InnerContainer>
 
                 <PageLogo resizeMode = "cover" source = {require('./../../assets/logo(2).png')} />
+                
 
                 <PageTitle>RUM BOARD</PageTitle>
                 <SubTitle>Account Login</SubTitle>
@@ -79,27 +87,47 @@ const Login = ({navigation}) => {
                         </ButtonText>
                     </StyledButton>
 
-                    <StyledTextUnderlined
+                    <SignUpView>
+                        <SignUpText> Don't have an account already? </SignUpText>
+                        <TextLink
+                         onPress={() =>  navigation.navigate('SignUp')}>
+                            <TextLinkContent>
+                                Sign Up
+                            </TextLinkContent>
+                        </TextLink>  
+                    </SignUpView>
+
+                    <GuestView>
+                        <GuestText> or </GuestText>
+                        <TextLink
+                         onPress={() =>  navigation.navigate('Home')}>
+                            <TextLinkContent>
+                                Continue as Guest
+                            </TextLinkContent>
+                        </TextLink>  
+                    </GuestView>
+
+                    {/* /** <StyledTextUnderlined
                        onPress={() =>  navigation.navigate('SignUp')}>
                         <ButtonText>
                            Sign up
                         </ButtonText>
-                                    </StyledTextUnderlined>
+                                    </StyledTextUnderlined> */
 
-                    <GuestButton
+                    /** <GuestButton
                     activeOpacity={0.8}
                     onPress={() =>navigation.navigate('Home')}>
                         <ButtonText>
-                        Login as Guest
+                        Continue as Guest
                         </ButtonText>
-                    </GuestButton>
-
+                    </GuestButton> */}
                     </StyledFormArea>)}
 
-
                 </Formik>
+            
             </InnerContainer>
         </StyledContainer>
+        
     );
 };
 

@@ -28,10 +28,18 @@ export const InnerContainer = styled.View`
 
 export const PageLogo = styled.Image`
 
-    width:90%;
+    width: 100%;
     height: 30%;
 
 `;
+export const AnotherLogo = styled.Image`
+
+    width: 20%;
+    height: 9%;
+    top: 10px;
+
+`;
+
 export const PageTitle = styled.Text`
     font-size: 30px;
     text-align: center;
@@ -113,7 +121,7 @@ export const StyledTextUnderlined = styled.TouchableOpacity`
 `;
 export const GuestButton = styled.TouchableOpacity`
     padding: 15px;
-    background-color: ${brand};
+    background-color: ${green};
     justify-content: center;
     border-radius: 5px;
     margin-vertical: 5px;
@@ -131,5 +139,50 @@ export const BlueButton = styled.TouchableOpacity`
     border-radius: 5px;
     margin-vertical: 5px;
     height: 60px;
+
+`;
+
+export const SignUpView = styled.View`
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+
+`;
+
+export const SignUpText = styled.Text`
+    justify-content: center;
+    align-content: center;
+    color: ${primary};
+    font-size: 15px;
+
+
+`;
+
+export const TextLink = styled.TouchableOpacity`
+    justify-content: center;
+    align-items: center;
+`;
+
+export const TextLinkContent = styled.Text`
+    color: ${green};
+    font-size: 15px;
+
+`;
+
+export const GuestView = styled.View`
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 1px;
+
+`;
+
+export const GuestText = styled.Text`
+    justify-content: center;
+    align-content: center;
+    color: ${primary};
+    font-size: 15px;
+
 
 `;
