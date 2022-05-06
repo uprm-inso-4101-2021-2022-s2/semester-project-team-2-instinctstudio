@@ -7,6 +7,10 @@ import home from './../../assets/icon/home.png';
 import search from './../../assets/icon/search.png';
 import notifications from './../../assets/icon/bell.png';
 import settings from './../../assets/icon/settings.png';
+import user from './../../assets/icon/user.png';
+import events from './../../assets/icon/events.png';
+import pet from './../../assets/icon/pet.png';
+import ads from './../../assets/icon/ads.png';
 import logout from './../../assets/icon/logout.png';
 // Menu
 import menu from './../../assets/icon/menu.png';
@@ -56,11 +60,16 @@ export function SideBar() {
                 // Tab Bar Buttons....
               }
 
+              {TabButton(currentTab, setCurrentTab, "Profile", user)}
               {TabButton(currentTab, setCurrentTab, "Home", home)}
               {TabButton(currentTab, setCurrentTab, "Search", search)}
+              {TabButton(currentTab, setCurrentTab, "Events", events)}
+              {TabButton(currentTab, setCurrentTab, "Pet", pet)}
+              {TabButton(currentTab, setCurrentTab, "Student Ads", ads)}
               {TabButton(currentTab, setCurrentTab, "Notifications", notifications)}
               {TabButton(currentTab, setCurrentTab, "Settings", settings)}
               {TabButton(currentTab, setCurrentTab, "About", info)}
+
 
             </View>
 
