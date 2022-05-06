@@ -1,11 +1,12 @@
 import React from 'react';
+
 import {SafeAreaView, Text} from 'react-native';
 import {Colors} from './../../styles/colors.js';
 const { primary, secondary, tertiary, darkLight, brand, green, red, blue } = Colors;
 
 //icons
 import {Octicons, Ionicons} from '@expo/vector-icons';
-
+import {SideBar} from "./../MenuScreen";
 import {
     StyledContainer,
     InnerContainer,
@@ -25,6 +26,7 @@ import{
 } from './../../components/about_style.js';
 const AboutScreen = () => (
       <StyledContainer>
+  
         <SafeAreaView>
         <AboutText>
               Team 2:{"\n"}

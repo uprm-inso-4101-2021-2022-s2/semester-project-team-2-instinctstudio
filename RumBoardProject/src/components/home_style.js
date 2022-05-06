@@ -44,7 +44,6 @@ export const barBackground = StyleSheet.create({
     flex: 4,
     backgroundColor: "black",
     margin: 0,
-
   },
 });
 

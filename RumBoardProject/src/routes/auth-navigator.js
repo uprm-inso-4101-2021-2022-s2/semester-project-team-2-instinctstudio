@@ -12,7 +12,7 @@ const AuthNavigatorConfig = {
 };
 
 const RouteConfigs =  {
-    Login:Login,
+   Login:Login,
    SignUp:{
         screen: SignUpScreen,
     },

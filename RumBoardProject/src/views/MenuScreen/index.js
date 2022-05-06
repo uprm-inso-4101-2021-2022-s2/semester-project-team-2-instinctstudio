@@ -13,11 +13,18 @@ import menu from './../../assets/icon/menu.png';
 import close from './../../assets/icon/close.png';
 import info from './../../assets/icon/info.png';
 
+import image from './../../assets/icon/info.png';
+
 
 import{
     barBackground,
+    StyledContainerHome,
 } from './../../components/home_style.js';
+import {
 
+    AboutScreen,
+
+}from './../AboutScreen';
 import {Colors} from './../../styles/colors.js';
 
 
@@ -26,10 +33,9 @@ const { primary, secondary, tertiary, darkLight, brand, green, red, blue } = Col
 
 export function SideBar() {
       const [currentTab, setCurrentTab] = useState("Home");
-      // To get the curretn Status of menu ...
+
       const [showMenu, setShowMenu] = useState(false);
 
-      // Animated Properties...
 
       const offsetValue = useRef(new Animated.Value(0)).current;
       // Scale Intially must be One...
@@ -53,7 +59,7 @@ export function SideBar() {
 
             <View style={{  }}>
               {
-                // Tab Bar Buttons....
+
               }
 
               {TabButton(currentTab, setCurrentTab, "Home", home)}
@@ -87,7 +93,7 @@ export function SideBar() {
             paddingHorizontal: 15,
             paddingVertical: 0,
             borderRadius: showMenu ? 15 : 0,
-            // Transforming View...
+
             transform: [
               { scale: scaleValue },
               { translateX: offsetValue }
@@ -100,6 +106,7 @@ export function SideBar() {
                 translateY: closeButtonOffset
               }]
             }}>
+
               <TouchableOpacity onPress={() => {
                 // Do Actions Here....
                 // Scaling the view...
@@ -163,8 +170,8 @@ export function SideBar() {
         <TouchableOpacity onPress={() => {
           if (title == "LogOut") {
             // Do your Stuff...
-          } else {
-            setCurrentTab(title)
+          }else {
+            setCurrentTab(title);
           }
         }}>
           <View style={{
@@ -175,19 +182,19 @@ export function SideBar() {
             paddingLeft: 13,
             paddingRight: 35,
             borderRadius: 8,
-            marginTop: 0
+            marginTop: 0,
           }}>
 
             <Image source={image} style={{
               width: 25, height: 25,
-              tintColor: currentTab == title ? "green" : "white"
+              tintColor: currentTab == title ? "green" : "white",
             }}></Image>
 
             <Text style={{
               fontSize: 15,
               fontWeight: 'bold',
               paddingLeft: 15,
-              color: currentTab == title ? "green" : "white"
+              color: currentTab == title ? "green" : "white",
             }}>{title}</Text>
 
           </View>
