@@ -3,6 +3,8 @@ import {SafeAreaView, Text, TouchableHighlight, View, Alert} from 'react-native'
 import{Formik} from 'formik';
 import { StatusBar } from 'expo-status-bar';
 //icons
+
+
 import {Octicons, Ionicons} from '@expo/vector-icons';
 import {Colors} from './../../styles/colors.js';
 import {
@@ -24,6 +26,13 @@ import {
 
 } from './../../components/styles.js';
 const {primary, darkLight, secondary,tertiary , green , blue} = Colors;
+
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+
+const uri = "mongodb+srv://rumboard:rumboard202200682@rumboardcluster.iewnp.mongodb.net/RumBoardCluster?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+
 
 const SignUpScreen = ({navigation}) =>
 {
@@ -92,7 +101,16 @@ const SignUpScreen = ({navigation}) =>
 
                                     <BlueButton
                                         activeOpacity={0.8}
-                                        onPress={() => Alert.alert('Created account')}>
+                                        onPress={() =>
+
+                                         client.connect(err => {
+                                         const users = client.db("Users").collection("Users");
+                                          //users.insert([{Name : "", Email: "", Password: 1}]);
+                                          client.close();
+                                        })
+
+                                        }>
+
                                         <ButtonText>
 
                                             Create Account
